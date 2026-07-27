@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MATSHUB — Empower Your Business, Accelerate Your Growth</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="./assets/style.css">
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            50:  '#eef5ff',
+            100: '#dcebff',
+            500: '#2f6feb',
+            600: '#1d5ee0',
+            700: '#1749b0',
+          },
+        },
+        fontFamily: {
+          sans: ['Poppins','ui-sans-serif','system-ui','sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  
+</style>
+</head>
+<body class="bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-100 antialiased">
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-b border-slate-200 dark:border-slate-700">
+  <div class="max-w-[1500px] mx-auto px-5 lg:px-8 flex items-center justify-between h-20 gap-4">
+
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-2 shrink-0">
+      <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white font-bold">M</div>
+      <div>
+        <p class="font-bold text-base leading-none text-slate-900 dark:text-white">MAT<span class="text-brand-600">s</span>HUB</p>
+        <p class="text-[10px] tracking-wide text-slate-400 dark:text-slate-500 leading-none mt-1">By Muhammad Awais Toor</p>
+      </div>
+    </a>
+
+    <!-- Main nav links -->
+    <nav class="hidden xl:flex items-center gap-7 text-sm font-medium text-slate-600 dark:text-slate-300 shrink-0">
+      <a href="#home" class="hover:text-brand-600 transition">Home</a>
+      <a href="#about" class="hover:text-brand-600 transition">About</a>
+      <a href="#services" class="hover:text-brand-600 transition">Services</a>
+      <a href="#courses" class="hover:text-brand-600 transition">Courses</a>
+      <a href="#blogs" class="hover:text-brand-600 transition">Blogs</a>
+      <a href="#contact" class="hover:text-brand-600 transition">Contact</a>
+    </nav>
+
+    <!-- Dropdown triggers -->
+    <div class="hidden xl:flex items-center gap-3 shrink-0">
+      <div class="relative">
+        <button id="learnBtn" class="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 transition text-slate-700 dark:text-slate-300 text-sm font-semibold px-4 py-2.5 rounded-lg">
+          Start Learning
+          <svg class="w-3.5 h-3.5 transition-transform" id="learnChevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+
+        <!-- Start Learning dropdown panel -->
+        <div id="learnPanel" class="hidden absolute right-0 mt-3 w-[420px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-2xl shadow-slate-900/10 p-4 grid grid-cols-2 gap-3">
+          <a href="#courses" class="dropdown-tile bg-slate-50 dark:bg-slate-800/40 hover:bg-brand-50 dark:hover:bg-brand-500/10 border border-slate-100 dark:border-slate-800 rounded-xl px-4 py-5 text-center text-sm font-semibold text-slate-700 dark:text-slate-300 transition">HTML Basics</a>
+          <a href="#courses" class="dropdown-tile bg-slate-50 dark:bg-slate-800/40 hover:bg-brand-50 dark:hover:bg-brand-500/10 border border-slate-100 dark:border-slate-800 rounded-xl px-4 py-5 text-center text-sm font-semibold text-slate-700 dark:text-slate-300 transition">CSS Mastery</a>
+          <a href="#courses" class="dropdown-tile bg-slate-50 dark:bg-slate-800/40 hover:bg-brand-50 dark:hover:bg-brand-500/10 border border-slate-100 dark:border-slate-800 rounded-xl px-4 py-5 text-center text-sm font-semibold text-slate-700 dark:text-slate-300 transition">JavaScript Intro</a>
+          <a href="#courses" class="dropdown-tile bg-slate-50 dark:bg-slate-800/40 hover:bg-brand-50 dark:hover:bg-brand-500/10 border border-slate-100 dark:border-slate-800 rounded-xl px-4 py-5 text-center text-sm font-semibold text-slate-700 dark:text-slate-300 transition">React Fundamentals</a>
+          <a href="#courses" class="dropdown-tile bg-slate-50 dark:bg-slate-800/40 hover:bg-brand-50 dark:hover:bg-brand-500/10 border border-slate-100 dark:border-slate-800 rounded-xl px-4 py-5 text-center text-sm font-semibold text-slate-700 dark:text-slate-300 transition">Node.js Guide</a>
+          <a href="#courses" class="dropdown-tile bg-slate-50 dark:bg-slate-800/40 hover:bg-brand-50 dark:hover:bg-brand-500/10 border border-slate-100 dark:border-slate-800 rounded-xl px-4 py-5 text-center text-sm font-semibold text-slate-700 dark:text-slate-300 transition">Git &amp; GitHub</a>
+          <div class="col-span-2 bg-gradient-to-br from-brand-500 to-brand-700 rounded-xl px-5 py-6 text-center text-white">
+            <div class="w-12 h-12 mx-auto rounded-full bg-white/15 flex items-center justify-center text-2xl mb-2"><i data-lucide="bot" class="w-10 h-10 text-white"></i></div>
+            <p class="font-semibold text-sm">We're on Social Media!</p>
+            <p class="text-xs text-white/80 mt-1">Follow us for updates and new challenges.</p>
+            <div class="flex items-center justify-center gap-4 mt-3 text-white">
+              <a href="#" class="hover:opacity-75 transition"><i class="fa-brands fa-instagram text-xl hover:text-pink-500 transition"></i></a>
+              <a href="#" class="hover:opacity-75 transition"><i class="fa-brands fa-linkedin text-xl hover:text-blue-500 transition"></i></a>
+              <a href="#" class="hover:opacity-75 transition"><i class="fa-brands fa-github text-xl hover:text-gray-300 transition"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <button id="resBtn" class="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 transition text-slate-700 dark:text-slate-300 text-sm font-semibold px-2 py-2.5 rounded-lg">
+          Resources
+          <svg class="w-3.5 h-3.5 transition-transform" id="resChevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+
+        <!-- Resources dropdown panel -->
+        <div id="resPanel" class="hidden absolute right-0 mt-3 w-64 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-2xl shadow-slate-900/10 p-2">
+          <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition text-sm text-slate-700 dark:text-slate-300"><span><i data-lucide="file-text" class="w-5 h-5 text-brand-600"></i></span>Documentation</a>
+          <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition text-sm text-slate-700 dark:text-slate-300"><span><i data-lucide="graduation-cap" class="w-5 h-5 text-brand-600"></i></span>Tutorials</a>
+          <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition text-sm text-slate-700 dark:text-slate-300"><span><i data-lucide="message-circle" class="w-5 h-5 text-brand-600"></i></span>Community Forum</a>
+          <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition text-sm text-slate-700 dark:text-slate-300"><span><i data-lucide="newspaper" class="w-5 h-5 text-brand-600"></i></span>Newsletter</a>
+          <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition text-sm text-slate-700 dark:text-slate-300"><span><i data-lucide="circle-help" class="w-5 h-5 text-brand-600"></i></span>Help Center</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search + auth -->
+    <div class="hidden lg:flex items-center gap-3 shrink-0">
+      <div class="relative">
+        <input type="text" placeholder="Search..." class="w-40 xl:w-52 bg-slate-100 dark:bg-slate-800 focus:bg-white focus:ring-2 focus:ring-brand-200 border border-transparent focus:border-brand-300 rounded-lg text-sm px-4 py-2.5 pr-12 outline-none transition text-slate-700 dark:text-slate-300 placeholder:text-slate-400">
+        <span class="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] text-slate-400 dark:text-slate-500 border border-slate-300 dark:border-slate-600 rounded px-1.5 py-0.5">⌘K</span>
+      </div>
+      <button class="border border-slate-300 dark:border-slate-600 hover:border-brand-400 hover:text-brand-600 transition text-slate-700 dark:text-slate-300 text-sm font-semibold px-4 py-2.5 rounded-lg">Login</button>
+      <button class="bg-brand-600 hover:bg-brand-700 transition text-white text-sm font-semibold px-4 py-2.5 rounded-lg">Signup</button>
+      <button id="themeToggle" class="w-10 h-10 rounded-lg border border-slate-300 dark:border-slate-600 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:text-brand-600 hover:border-brand-400 transition"><i data-lucide="moon" class="w-5 h-5"></i></button>
+    </div>
+
+    <button id="menuBtn" class="xl:hidden text-slate-700 dark:text-slate-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu overlay -->
+<div id="mobileOverlay" class="hidden fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-40 xl:hidden"></div>
+
+<!-- Mobile sidebar (slides in from right) -->
+<aside id="mobileMenu" class="fixed top-0 right-0 h-full w-[80%] max-w-xs bg-white dark:bg-slate-900 z-50 xl:hidden translate-x-full transition-transform duration-300 ease-in-out shadow-2xl flex flex-col overflow-y-auto">
+  <div class="flex items-center justify-between px-5 h-20 border-b border-slate-100 dark:border-slate-800 shrink-0">
+    <div class="flex items-center gap-2">
+      <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white font-bold">M</div>
+      <p class="font-bold text-base text-slate-900 dark:text-white">MAT<span class="text-brand-600">s</span>HUB</p>
+    </div>
+    <button id="menuCloseBtn" class="w-9 h-9 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="px-6 py-5 flex flex-col gap-3 text-slate-600 dark:text-slate-300 font-medium">
+    <input type="text" placeholder="Search..." class="bg-slate-100 dark:bg-slate-800 rounded-lg text-sm px-4 py-2.5 outline-none">
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#courses" class="mobile-link">Courses</a>
+    <a href="#blogs" class="mobile-link">Blogs</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+    <a href="#courses" class="mobile-link">Start Learning</a>
+    <a href="#" class="mobile-link">Resources</a>
+    <div class="flex gap-3 mt-1">
+      <button class="flex-1 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 text-sm font-semibold px-4 py-2.5 rounded-lg">Login</button>
+      <button class="flex-1 bg-brand-600 text-white text-sm font-semibold px-4 py-2.5 rounded-lg">Signup</button>
+    </div>
+    <button id="themeToggleMobile" class="flex items-center justify-center gap-2 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 text-sm font-semibold px-4 py-2.5 rounded-lg mt-1">🌙 Dark Mode</button>
+  </div>
+</aside>
+
+
+<!-- ===================== HERO ===================== -->
+<section id="home" class="relative overflow-hidden pt-16 pb-10">
+  <div class="absolute inset-0 -z-10 bg-gradient-to-b from-brand-50/70 via-white to-white dark:from-slate-900 dark:via-slate-900 dark:to-slate-900"></div>
+  <div class="max-w-4xl mx-auto text-center px-6 fade-up">
+    <span class="inline-block text-xs font-semibold tracking-wide text-brand-600 border border-brand-200 rounded-full px-4 py-2 mb-6">WE ARE POWERING IDEAS FORWARD</span>
+    <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white leading-tight">
+      Empower Your <span class="gradient-text">Business</span><br>
+      Accelerate Your Growth
+    </h1>
+    <p class="mt-5 text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
+      We are dedicated to transforming complex digital challenges into seamless experiences, offering innovative tools and strategies that not only save time but also maximize efficiency and long-term success.
+    </p>
+    <div class="mt-8 flex items-center justify-center gap-4">
+      <button class="bg-brand-600 hover:bg-brand-700 transition text-white font-semibold px-7 py-3 rounded-lg shadow-lg shadow-brand-500/20">Get Started</button>
+      <button class="border border-slate-300 dark:border-slate-600 hover:border-brand-400 transition text-slate-700 dark:text-slate-300 font-semibold px-7 py-3 rounded-lg">Preview Platform</button>
+    </div>
+  </div>
+
+  <!-- Dashboard mockup -->
+  <div class="max-w-6xl mx-auto mt-14 px-6 fade-up">
+    <div class="rounded-2xl border border-slate-200 dark:border-slate-700 shadow-2xl shadow-brand-500/10 overflow-hidden bg-white dark:bg-slate-900">
+      <div class="flex items-center gap-2 px-4 py-3 bg-slate-50 dark:bg-slate-800/40 border-b border-slate-200 dark:border-slate-700">
+        <span class="w-3 h-3 rounded-full bg-red-400"></span>
+        <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+        <span class="w-3 h-3 rounded-full bg-green-400"></span>
+        <div class="ml-4 flex-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-md text-xs text-slate-400 dark:text-slate-500 px-3 py-1.5 max-w-sm">app.matshub.com/dashboard</div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 p-6 bg-slate-50 dark:bg-slate-800/40">
+        <div class="bg-white dark:bg-slate-900 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800">
+          <p class="text-xs text-slate-400 dark:text-slate-500">Revenue</p>
+          <p class="text-xl font-bold text-emerald-500 mt-1">234%</p>
+        </div>
+        <div class="bg-white dark:bg-slate-900 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800">
+          <p class="text-xs text-slate-400 dark:text-slate-500">Bounce Rate</p>
+          <p class="text-xl font-bold text-rose-500 mt-1">71%</p>
+        </div>
+        <div class="bg-white dark:bg-slate-900 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800">
+          <p class="text-xs text-slate-400 dark:text-slate-500">Total Sales</p>
+          <p class="text-xl font-bold text-slate-800 dark:text-slate-100 mt-1">$1.45M</p>
+        </div>
+        <div class="bg-white dark:bg-slate-900 rounded-xl p-4 shadow-sm border border-slate-100 dark:border-slate-800">
+          <p class="text-xs text-slate-400 dark:text-slate-500">Growth</p>
+          <p class="text-xl font-bold text-emerald-500 mt-1">34%</p>
+        </div>
+        <div class="md:col-span-3 bg-white dark:bg-slate-900 rounded-xl p-5 shadow-sm border border-slate-100 dark:border-slate-800">
+          <p class="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-4">Traffic Sources</p>
+          <div class="flex items-end gap-3 h-40">
+            <div class="w-6 bg-brand-500/70 rounded-t" style="height:40%"></div>
+            <div class="w-6 bg-brand-500/70 rounded-t" style="height:65%"></div>
+            <div class="w-6 bg-brand-500 rounded-t" style="height:90%"></div>
+            <div class="w-6 bg-brand-500/70 rounded-t" style="height:55%"></div>
+            <div class="w-6 bg-brand-500/70 rounded-t" style="height:75%"></div>
+            <div class="w-6 bg-brand-500/70 rounded-t" style="height:35%"></div>
+            <div class="w-6 bg-brand-500/70 rounded-t" style="height:60%"></div>
+            <div class="w-6 bg-brand-500/70 rounded-t" style="height:80%"></div>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-slate-900 rounded-xl p-5 shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col items-center justify-center">
+          <p class="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3">Overall Score</p>
+          <div class="relative w-24 h-24 rounded-full" style="background:conic-gradient(#2f6feb 75%, #e2e8f0 0)">
+            <div class="absolute inset-2 bg-white dark:bg-slate-900 rounded-full flex items-center justify-center text-xl font-bold text-brand-600">75</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="max-w-7xl mx-auto px-6 lg:px-10 py-24 grid lg:grid-cols-2 gap-14 items-center">
+  <div class="fade-up">
+    <h2 class="text-3xl font-bold text-slate-900 dark:text-white">About <span class="text-brand-600">MATsHub</span></h2>
+    <p class="mt-5 text-slate-500 dark:text-slate-400 leading-relaxed">
+      At MATsHub, we deliver modern digital solutions that help businesses and individuals grow. From web development, e-commerce, and branding to digital marketing, education, and design, we provide strategies that combine creativity with technology.
+    </p>
+    <p class="mt-4 text-slate-500 dark:text-slate-400 leading-relaxed">
+      Our mission is to empower people and businesses with the right tools to succeed in today's competitive digital world.
+    </p>
+    <div class="mt-8 grid sm:grid-cols-2 gap-5">
+      <div class="flex gap-3">
+        <div class="w-9 h-9 rounded-full bg-brand-50 dark:bg-brand-500/10 text-brand-600 flex items-center justify-center shrink-0"><i data-lucide="badge-check" class="w-5 h-5 text-brand-600"></i></div>
+        <div>
+          <p class="font-semibold text-slate-800 dark:text-slate-100 text-sm">Creative Solutions</p>
+          <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">We craft unique websites, engaging designs, and effective marketing campaigns tailored to your goals.</p>
+        </div>
+      </div>
+      <div class="flex gap-3">
+        <div class="w-9 h-9 rounded-full bg-brand-50 dark:bg-brand-500/10 text-brand-600 flex items-center justify-center shrink-0"><i data-lucide="handshake" class="w-5 h-5 text-brand-600"></i></div>
+        <div>
+          <p class="font-semibold text-slate-800 dark:text-slate-100 text-sm">Trusted Partner</p>
+          <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">We work as your long-term digital partner, advertising, and online solutions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="relative fade-up">
+    <div class="rounded-3xl bg-gradient-to-br from-brand-500 to-brand-700 aspect-[4/3] flex items-center justify-center overflow-hidden">
+      <svg viewBox="0 0 200 150" class="w-4/5 opacity-90">
+        <rect x="10" y="30" width="80" height="55" rx="6" fill="white" fill-opacity="0.15"/>
+        <rect x="100" y="10" width="90" height="70" rx="6" fill="white" fill-opacity="0.2"/>
+        <circle cx="50" cy="115" r="20" fill="white" fill-opacity="0.15"/>
+        <circle cx="150" cy="120" r="16" fill="white" fill-opacity="0.2"/>
+      </svg>
+    </div>
+    <div class="absolute -top-5 -left-5 bg-white dark:bg-slate-900 rounded-xl shadow-lg px-4 py-3 text-xs">
+      <p class="font-bold text-brand-600 text-lg">100+</p>
+      <p class="text-slate-400 dark:text-slate-500">Online Courses</p>
+    </div>
+    <div class="absolute -bottom-5 -right-5 bg-white dark:bg-slate-900 rounded-xl shadow-lg px-4 py-3 text-xs">
+      <p class="font-bold text-brand-600 text-lg">10+</p>
+      <p class="text-slate-400 dark:text-slate-500">Years of Experience</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INTEGRATED SOLUTIONS ===================== -->
+<section class="max-w-7xl mx-auto px-6 lg:px-10 py-10 grid lg:grid-cols-2 gap-14 items-center">
+  <div class="fade-up">
+    <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Integrated Digital <span class="text-brand-600">Solutions</span></h2>
+    <p class="mt-5 text-slate-500 dark:text-slate-400 leading-relaxed">Empowering businesses with innovative services that fuel growth in every dimension.</p>
+    <ul class="mt-6 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+      <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span>Custom Web Development</li>
+      <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span>Creative Branding &amp; Design</li>
+      <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span>Digital Marketing &amp; Ads</li>
+      <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-600"></span>Education &amp; Training</li>
+    </ul>
+    <div class="mt-8 flex gap-10">
+      <div>
+        <p class="text-2xl font-bold text-slate-900 dark:text-white">95%</p>
+        <p class="text-xs text-slate-400 dark:text-slate-500">Client Retention</p>
+      </div>
+      <div>
+        <p class="text-2xl font-bold text-slate-900 dark:text-white">24/7</p>
+        <p class="text-xs text-slate-400 dark:text-slate-500">Dedicated Support</p>
+      </div>
+    </div>
+  </div>
+  <div class="grid sm:grid-cols-2 gap-5 fade-up">
+    <div class="card-hover bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm rounded-2xl p-5">
+      <div class="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-500/10 text-blue-500 flex items-center justify-center mb-4"><i data-lucide="cloud" class="w-6 h-6 text-blue-500"></i></div>
+      <p class="font-semibold text-sm text-slate-800 dark:text-slate-100">Cloud-Ready Deployment</p>
+      <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">Host and scale your apps with zero hassle.</p>
+      <span class="inline-block mt-3 text-[10px] font-semibold text-blue-500 bg-blue-50 dark:bg-blue-500/10 px-2 py-1 rounded-full">Deployed</span>
+    </div>
+    <div class="card-hover bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm rounded-2xl p-5">
+      <div class="w-10 h-10 rounded-lg bg-amber-50 dark:bg-amber-500/10 text-amber-500 flex items-center justify-center mb-4"><i data-lucide="bar-chart-3" class="w-6 h-6 text-amber-500"></i></div>
+      <p class="font-semibold text-sm text-slate-800 dark:text-slate-100">Smart Business Strategies</p>
+      <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">Data-driven marketing for faster growth.</p>
+      <span class="inline-block mt-3 text-[10px] font-semibold text-amber-500 bg-amber-50 dark:bg-amber-500/10 px-2 py-1 rounded-full">Operational</span>
+    </div>
+    <div class="card-hover bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm rounded-2xl p-5">
+      <div class="w-10 h-10 rounded-lg bg-emerald-50 dark:bg-emerald-500/10 text-emerald-500 flex items-center justify-center mb-4"><i data-lucide="settings-2" class="w-6 h-6 text-emerald-500"></i></div>
+      <p class="font-semibold text-sm text-slate-800 dark:text-slate-100">Intelligent Automation</p>
+      <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">Automate work to save time and cost.</p>
+      <span class="inline-block mt-3 text-[10px] font-semibold text-emerald-500 bg-emerald-50 dark:bg-emerald-500/10 px-2 py-1 rounded-full">Scheduled</span>
+    </div>
+    <div class="card-hover bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm rounded-2xl p-5">
+      <div class="w-10 h-10 rounded-lg bg-rose-50 dark:bg-rose-500/10 text-rose-500 flex items-center justify-center mb-4"><i data-lucide="palette" class="w-6 h-6 text-rose-500"></i></div>
+      <p class="font-semibold text-sm text-slate-800 dark:text-slate-100">Creative Design &amp; Branding</p>
+      <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">Build strong brand identity with impactful visuals.</p>
+      <span class="inline-block mt-3 text-[10px] font-semibold text-rose-500 bg-rose-50 dark:bg-rose-500/10 px-2 py-1 rounded-full">Active</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FEATURES ===================== -->
+<section id="features" class="bg-slate-50 dark:bg-slate-800/40 py-24 mt-16">
+  <div class="max-w-5xl mx-auto text-center px-6 fade-up">
+    <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Our Features</h2>
+    <p class="mt-3 text-slate-500 dark:text-slate-400">We provide modern digital solutions to help businesses grow and reach more customers online.</p>
+  </div>
+  <div class="max-w-6xl mx-auto mt-12 px-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Feature cards injected by JS -->
+    <div id="featureGrid" class="contents"></div>
+  </div>
+</section>
+
+<!-- ===================== COURSES ===================== -->
+<section id="courses" class="max-w-6xl mx-auto px-6 lg:px-10 py-24 text-center">
+  <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Advanced Level <span class="text-brand-600">Courses</span></h2>
+  <p class="mt-3 text-slate-500 dark:text-slate-400">Gain real-world skills and advance your career with expert-led content.</p>
+  <div class="mt-12 grid md:grid-cols-3 gap-6">
+    <div class="card-hover relative rounded-2xl overflow-hidden h-56 bg-slate-900 text-left flex items-end p-5">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
+      <div class="relative z-10">
+        <p class="font-semibold text-white">Basic Frontend Web Design</p>
+        <p class="text-xs text-slate-300 mt-1">HTML, CSS, Bootstrap &amp; Design</p>
+      </div>
+    </div>
+    <div class="card-hover relative rounded-2xl overflow-hidden h-56 bg-slate-900 text-left flex items-end p-5">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
+      <div class="relative z-10">
+        <p class="font-semibold text-white">Advanced Frontend Web Design</p>
+        <p class="text-xs text-slate-300 mt-1">React, Tailwind CSS &amp; modern practices</p>
+      </div>
+    </div>
+    <div class="card-hover relative rounded-2xl overflow-hidden h-56 bg-slate-900 text-left flex items-end p-5">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
+      <div class="relative z-10">
+        <p class="font-semibold text-white">Full Stack Development</p>
+        <p class="text-xs text-slate-300 mt-1">Build robust APIs and web backends with Node &amp; MongoDB</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="bg-slate-50 dark:bg-slate-800/40 py-24">
+  <div class="max-w-3xl mx-auto px-6 text-center fade-up">
+    <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Frequently Asked Questions</h2>
+    <p class="mt-3 text-slate-500 dark:text-slate-400">Everything you need to know about MATsHub, our services, and how to get started.</p>
+  </div>
+  <div id="faqList" class="max-w-3xl mx-auto mt-10 px-6 space-y-3"></div>
+  <div class="text-center mt-8">
+    <button id="faqMore" class="border border-brand-300 text-brand-600 text-sm font-semibold px-6 py-2.5 rounded-full hover:bg-brand-50 transition">Show More</button>
+  </div>
+</section>
+
+<!-- ===================== ACHIEVEMENTS ===================== -->
+<section class="max-w-6xl mx-auto px-6 lg:px-10 py-24 text-center">
+  <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Our Achievements <span class="text-brand-600">Wall</span></h2>
+  <p class="mt-3 text-slate-500 dark:text-slate-400">Interactive timeline of milestones — hover on desktop, tap on mobile.</p>
+
+  <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="card-hover border border-slate-100 dark:border-slate-800 rounded-2xl p-6 shadow-sm">
+      <div class="w-11 h-11 mx-auto rounded-xl bg-blue-50 dark:bg-blue-500/10 text-blue-500 flex items-center justify-center text-xl"><i data-lucide="rocket" class="w-6 h-6"></i></div>
+      <p class="font-semibold mt-4 text-slate-800 dark:text-slate-100">Launch</p>
+      <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">Started with a vision</p>
+    </div>
+    <div class="card-hover border border-slate-100 dark:border-slate-800 rounded-2xl p-6 shadow-sm">
+      <div class="w-11 h-11 mx-auto rounded-xl bg-pink-50 dark:bg-pink-500/10 text-pink-500 flex items-center justify-center text-xl"><i data-lucide="users" class="w-6 h-6 text-pink-500"></i></div>
+      <p class="font-semibold mt-4 text-slate-800 dark:text-slate-100">Community</p>
+      <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">Growing family</p>
+    </div>
+    <div class="card-hover border border-slate-100 dark:border-slate-800 rounded-2xl p-6 shadow-sm">
+      <div class="w-11 h-11 mx-auto rounded-xl bg-amber-50 dark:bg-amber-500/10 text-amber-500 flex items-center justify-center text-xl"><i data-lucide="award" class="w-6 h-6 text-amber-500"></i></div>
+      <p class="font-semibold mt-4 text-slate-800 dark:text-slate-100">Recognition</p>
+      <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">Trusted excellence</p>
+    </div>
+    <div class="card-hover border border-slate-100 dark:border-slate-800 rounded-2xl p-6 shadow-sm">
+      <div class="w-11 h-11 mx-auto rounded-xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-xl"><i data-lucide="trending-up" class="w-6 h-6 text-emerald-500"></i></div>
+      <p class="font-semibold mt-4 text-slate-800 dark:text-slate-100">Future</p>
+      <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">Next big leap</p>
+    </div>
+  </div>
+
+  <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="rounded-2xl p-6 bg-brand-50/60 dark:bg-brand-500/10">
+      <p class="text-3xl font-bold text-brand-600" data-counter="232">0</p>
+      <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">Happy Clients</p>
+    </div>
+    <div class="rounded-2xl p-6 bg-brand-50/60 dark:bg-brand-500/10">
+      <p class="text-3xl font-bold text-brand-600" data-counter="521">0</p>
+      <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">Projects</p>
+    </div>
+    <div class="rounded-2xl p-6 bg-brand-50/60 dark:bg-brand-500/10">
+      <p class="text-3xl font-bold text-brand-600" data-counter="1463">0</p>
+      <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">Hours Of Support</p>
+    </div>
+    <div class="rounded-2xl p-6 bg-brand-50/60 dark:bg-brand-500/10">
+      <p class="text-3xl font-bold text-brand-600" data-counter="15">0</p>
+      <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">Hard Workers</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TEAM ===================== -->
+<section class="bg-slate-50 dark:bg-slate-800/40 py-24 text-center">
+  <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Meet Our <span class="text-brand-600">Team</span></h2>
+  <p class="mt-3 text-slate-500 dark:text-slate-400 max-w-xl mx-auto">Our dedicated team works together to create an inspiring environment where students can learn, grow, and achieve success.</p>
+  <div class="mt-12 flex flex-wrap justify-center gap-8 px-6">
+    <div class="card-hover bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 p-6 w-64">
+      <div class="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white text-2xl font-bold">MA</div>
+      <p class="font-semibold mt-4 text-slate-800 dark:text-slate-100">M Awais Toor</p>
+      <p class="text-xs text-brand-500">Founder &amp; CEO</p>
+      <p class="text-xs text-slate-400 dark:text-slate-500 mt-2">Leading MATsHub with a vision to empower students and create a digital learning revolution.</p>
+    </div>
+    <div class="card-hover bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 p-6 w-64">
+      <div class="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-pink-400 to-rose-500 flex items-center justify-center text-white text-2xl font-bold">HS</div>
+      <p class="font-semibold mt-4 text-slate-800 dark:text-slate-100">Haseeba Shoukat</p>
+      <p class="text-xs text-brand-500">Chief Operating Officer (COO)</p>
+      <p class="text-xs text-slate-400 dark:text-slate-500 mt-2">Managing operations and growth at MATsHub with leadership and excellence.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY CHOOSE US ===================== -->
+<section class="max-w-6xl mx-auto px-6 lg:px-10 py-24 text-center">
+  <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Why Choose <span class="text-brand-600">Us?</span></h2>
+  <p class="mt-3 text-slate-500 dark:text-slate-400">We don't just provide services — we provide experiences that transform your business, here's why our clients love working with us.</p>
+  <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-lg bg-amber-50 dark:bg-amber-500/10 text-amber-500 flex items-center justify-center shrink-0"><i data-lucide="star" class="w-6 h-6 text-amber-500"></i></div>
+      <div>
+        <p class="font-semibold text-sm text-slate-800 dark:text-slate-100">Proven Expertise</p>
+        <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">Years of experience in web development, marketing, and design.</p>
+      </div>
+    </div>
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-500/10 text-blue-500 flex items-center justify-center shrink-0"><i data-lucide="zap" class="w-6 h-6 text-blue-500"></i></div>
+      <div>
+        <p class="font-semibold text-sm text-slate-800 dark:text-slate-100">Fast Execution</p>
+        <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">We deliver high-quality solutions on time without compromise.</p>
+      </div>
+    </div>
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-lg bg-emerald-50 dark:bg-emerald-500/10 text-emerald-500 flex items-center justify-center shrink-0"><i data-lucide="heart-handshake" class="w-6 h-6 text-emerald-500"></i></div>
+      <div>
+        <p class="font-semibold text-sm text-slate-800 dark:text-slate-100">Client Satisfaction</p>
+        <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">Over 95% of our clients return for repeat projects.</p>
+      </div>
+    </div>
+    <div class="flex gap-3">
+      <div class="w-10 h-10 rounded-lg bg-purple-50 dark:bg-purple-500/10 text-purple-500 flex items-center justify-center shrink-0"><i data-lucide="shield-check" class="w-6 h-6 text-purple-500"></i></div>
+      <div>
+        <p class="font-semibold text-sm text-slate-800 dark:text-slate-100">Reliable Support</p>
+        <p class="text-xs text-slate-400 dark:text-slate-500 mt-1">Get ongoing support and guidance to keep your business growing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="bg-slate-900 text-slate-300 pt-20 pb-8">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid sm:grid-cols-2 lg:grid-cols-5 gap-10">
+    <div>
+      <div class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white font-bold">M</div>
+        <p class="font-bold text-white">MATsHUB</p>
+      </div>
+      <p class="text-xs text-slate-400 dark:text-slate-500 mt-4 leading-relaxed">Learn modern web development skills and build powerful tools and websites to innovate with the newest tech.</p>
+    </div>
+    <div>
+      <p class="font-semibold text-white text-sm mb-4">IT Services</p>
+      <ul class="text-xs space-y-2 text-slate-400 dark:text-slate-500">
+        <li>Digital Marketing</li>
+        <li>Search Engine</li>
+        <li>Website Development</li>
+        <li>Graphic Designing</li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-semibold text-white text-sm mb-4">Company</p>
+      <ul class="text-xs space-y-2 text-slate-400 dark:text-slate-500">
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Services</li>
+        <li>Courses</li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-semibold text-white text-sm mb-4">Support</p>
+      <ul class="text-xs space-y-2 text-slate-400 dark:text-slate-500">
+        <li>Career</li>
+        <li>Team</li>
+        <li>Portfolio</li>
+        <li>Contact Us</li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-semibold text-white text-sm mb-4">Contact Us</p>
+      <ul class="text-xs space-y-3 text-slate-400 dark:text-slate-500">
+        <li class="flex gap-2"><i data-lucide="map-pin" class="w-5 h-5 text-brand-600"></i> Multipara Main Bazaar, Jaranwala Road, Faisalabad</li>
+        <li class="flex gap-2 font-bold"><i data-lucide="phone" class="w-5 h-5 text-brand-600"></i> +92 349 2006 206</li>
+        <li class="flex gap-2"><i data-lucide="mail" class="w-5 h-5 text-brand-600"></i> matshub@gmail.com</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 mt-14 pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-slate-500 dark:text-slate-400">
+    <p>© 2026 MATSHUB. All Rights Reserved.</p>
+    <div class="flex gap-4">
+      <span><i class="fa-brands fa-youtube text-xl hover:text-red-500 transition"></i></span>
+      <span><i class="fa-brands fa-facebook text-xl hover:text-blue-500 transition"></i></span>
+      <span><i class="fa-brands fa-instagram text-xl hover:text-pink-500 transition"></i></span>
+      <span><i class="fa-brands fa-linkedin text-xl hover:text-sky-500 transition"></i></span>
+    </div>
+  </div>
+</footer>
+
+<button id="scrollTop" class="hidden fixed bottom-6 right-6 w-11 h-11 rounded-full bg-brand-600 text-white shadow-lg items-center justify-center hover:bg-brand-700 transition">↑</button>
+
+    <!-- Link JAVASCRIPT FILE-->
+    <script src="./assets/script.js"></script>
+    <!-- For Icons -->
+    <script>
+       lucide.createIcons();
+    </script>
+</body>
+</html>

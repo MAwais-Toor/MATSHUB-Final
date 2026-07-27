@@ -1,0 +1,18 @@
+/* BASIC AND IMPRTANT CSS STYLING */
+body{font-family:'Poppins',sans-serif;}
+  .fade-up{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease;}
+  .fade-up.show{opacity:1; transform:translateY(0);}
+  .card-hover{transition:transform .3s ease, box-shadow .3s ease;}
+  .card-hover:hover{transform:translateY(-6px); box-shadow:0 20px 40px -12px rgba(47,111,235,.25);}
+  .gradient-text{background:linear-gradient(90deg,#2f6feb,#5b8ff9);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .faq-chevron{transition:transform .3s ease;}
+  .faq-open .faq-chevron{transform:rotate(180deg);}
+  .faq-panel{max-height:0; overflow:hidden; transition:max-height .35s ease;}
+  ::-webkit-scrollbar{width:8px;}
+  ::-webkit-scrollbar-thumb{background:#c7d7fb; border-radius:8px;}
+  .dark ::-webkit-scrollbar-thumb{background:#334155;}
+  .mobile-link{padding:.6rem .25rem; border-radius:.5rem; transition:background-color .2s ease, color .2s ease;}
+  .mobile-link:hover{background:#f1f5f9; color:#1d5ee0;}
+  .dark .mobile-link:hover{background:#1e293b; color:#5b8ff9;}
+  body, header, section, footer, div, button, input, a, span{transition:background-color .25s ease, border-color .25s ease, color .25s ease;}
+  .dark body{background:#0f172a;}
