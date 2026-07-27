@@ -7,7 +7,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-<link rel="stylesheet" href="./assets/style.css">
+<link rel="stylesheet" href="./assets/css/style.css">
 <script>
   tailwind.config = {
     darkMode: 'class',
@@ -42,11 +42,9 @@
   <div class="max-w-[1500px] mx-auto px-5 lg:px-8 flex items-center justify-between h-20 gap-4">
 
     <!-- Logo -->
-    <a href="#" class="flex items-center gap-2 shrink-0">
-      <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white font-bold">M</div>
-      <div>
-        <p class="font-bold text-base leading-none text-slate-900 dark:text-white">MAT<span class="text-brand-600">s</span>HUB</p>
-        <p class="text-[10px] tracking-wide text-slate-400 dark:text-slate-500 leading-none mt-1">By Muhammad Awais Toor</p>
+    <a href="/index.html" class="flex items-center gap-3 shrink-0">
+      <div class="rounded-lg px-2.5 py-1.5 inline-flex items-center">
+        <img id="navLogo" src="assets/images/dark-logo.png" alt="MATSHUB" class="h-10 w-auto">
       </div>
     </a>
 
@@ -129,10 +127,9 @@
 <!-- Mobile sidebar (slides in from right) -->
 <aside id="mobileMenu" class="fixed top-0 right-0 h-full w-[80%] max-w-xs bg-white dark:bg-slate-900 z-50 xl:hidden translate-x-full transition-transform duration-300 ease-in-out shadow-2xl flex flex-col overflow-y-auto">
   <div class="flex items-center justify-between px-5 h-20 border-b border-slate-100 dark:border-slate-800 shrink-0">
-    <div class="flex items-center gap-2">
-      <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white font-bold">M</div>
-      <p class="font-bold text-base text-slate-900 dark:text-white">MAT<span class="text-brand-600">s</span>HUB</p>
-    </div>
+      <div class="rounded-lg px-2.5 py-1.5 inline-flex items-center">
+        <img id="sidebarLogo" src="assets/images/dark-logo.png" alt="MATSHUB" class="h-10 w-auto">
+      </div>
     <button id="menuCloseBtn" class="w-9 h-9 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300">
       <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
     </button>
@@ -160,7 +157,10 @@
 <section id="home" class="relative overflow-hidden pt-16 pb-10">
   <div class="absolute inset-0 -z-10 bg-gradient-to-b from-brand-50/70 via-white to-white dark:from-slate-900 dark:via-slate-900 dark:to-slate-900"></div>
   <div class="max-w-4xl mx-auto text-center px-6 fade-up">
-    <span class="inline-block text-xs font-semibold tracking-wide text-brand-600 border border-brand-200 rounded-full px-4 py-2 mb-6">WE ARE POWERING IDEAS FORWARD</span>
+      <div class="relative inline-block rounded-2xl p-[3px] overflow-hidden mb-6">
+          <span class="absolute inset-0 rounded-2xl bg-[conic-gradient(from_0deg,#60a5fa,#2563eb,#1e3a8a,#60a5fa)] animate-spin-slow"></span>
+          <span class="relative text-xs sm:text-sm block italic rounded-2xl px-4 sm:px-6 py-2 sm:py-3 bg-[#f5f9ff] dark:bg-slate-900 text-gray-800 dark:text-slate-100 font-semibold">WE ARE POWERING IDEAS FORWARD</span>
+      </div>
     <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white leading-tight">
       Empower Your <span class="gradient-text">Business</span><br>
       Accelerate Your Growth
@@ -168,10 +168,17 @@
     <p class="mt-5 text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
       We are dedicated to transforming complex digital challenges into seamless experiences, offering innovative tools and strategies that not only save time but also maximize efficiency and long-term success.
     </p>
-    <div class="mt-8 flex items-center justify-center gap-4">
-      <button class="bg-brand-600 hover:bg-brand-700 transition text-white font-semibold px-7 py-3 rounded-lg shadow-lg shadow-brand-500/20">Get Started</button>
-      <button class="border border-slate-300 dark:border-slate-600 hover:border-brand-400 transition text-slate-700 dark:text-slate-300 font-semibold px-7 py-3 rounded-lg">Preview Platform</button>
-    </div>
+      <div class="mt-8 flex items-center justify-center gap-3 w-full">
+          <button
+            class="flex-1 sm:flex-none bg-brand-600 hover:bg-brand-700 transition text-white font-semibold px-5 py-3 rounded-lg shadow-lg shadow-brand-500/20">
+            Explore Now
+          </button>
+
+          <button
+            class="flex-1 sm:flex-none border border-slate-300 dark:border-slate-600 hover:border-brand-400 transition text-slate-700 dark:text-slate-300 font-semibold px-5 py-3 rounded-lg">
+            Get Started
+          </button>
+      </div>
   </div>
 
   <!-- Dashboard mockup -->
@@ -227,9 +234,9 @@
 <!-- ===================== ABOUT ===================== -->
 <section id="about" class="max-w-7xl mx-auto px-6 lg:px-10 py-24 grid lg:grid-cols-2 gap-14 items-center">
   <div class="fade-up">
-    <h2 class="text-3xl font-bold text-slate-900 dark:text-white">About <span class="text-brand-600">MATsHub</span></h2>
+    <h2 class="text-3xl font-bold text-slate-900 dark:text-white">About <span class="text-brand-600">MATSHUB</span></h2>
     <p class="mt-5 text-slate-500 dark:text-slate-400 leading-relaxed">
-      At MATsHub, we deliver modern digital solutions that help businesses and individuals grow. From web development, e-commerce, and branding to digital marketing, education, and design, we provide strategies that combine creativity with technology.
+      At MATSHUB, we deliver modern digital solutions that help businesses and individuals grow. From web development, e-commerce, and branding to digital marketing, education, and design, we provide strategies that combine creativity with technology.
     </p>
     <p class="mt-4 text-slate-500 dark:text-slate-400 leading-relaxed">
       Our mission is to empower people and businesses with the right tools to succeed in today's competitive digital world.
@@ -366,7 +373,7 @@
 <section class="bg-slate-50 dark:bg-slate-800/40 py-24">
   <div class="max-w-3xl mx-auto px-6 text-center fade-up">
     <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Frequently Asked Questions</h2>
-    <p class="mt-3 text-slate-500 dark:text-slate-400">Everything you need to know about MATsHub, our services, and how to get started.</p>
+    <p class="mt-3 text-slate-500 dark:text-slate-400">Everything you need to know about MATSHUB, our services, and how to get started.</p>
   </div>
   <div id="faqList" class="max-w-3xl mx-auto mt-10 px-6 space-y-3"></div>
   <div class="text-center mt-8">
@@ -431,13 +438,13 @@
       <div class="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white text-2xl font-bold">MA</div>
       <p class="font-semibold mt-4 text-slate-800 dark:text-slate-100">M Awais Toor</p>
       <p class="text-xs text-brand-500">Founder &amp; CEO</p>
-      <p class="text-xs text-slate-400 dark:text-slate-500 mt-2">Leading MATsHub with a vision to empower students and create a digital learning revolution.</p>
+      <p class="text-xs text-slate-400 dark:text-slate-500 mt-2">Leading MATSHUB with a vision to empower students and create a digital learning revolution.</p>
     </div>
     <div class="card-hover bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 p-6 w-64">
       <div class="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-pink-400 to-rose-500 flex items-center justify-center text-white text-2xl font-bold">HS</div>
       <p class="font-semibold mt-4 text-slate-800 dark:text-slate-100">Haseeba Shoukat</p>
       <p class="text-xs text-brand-500">Chief Operating Officer (COO)</p>
-      <p class="text-xs text-slate-400 dark:text-slate-500 mt-2">Managing operations and growth at MATsHub with leadership and excellence.</p>
+      <p class="text-xs text-slate-400 dark:text-slate-500 mt-2">Managing operations and growth at MATSHUB with leadership and excellence.</p>
     </div>
   </div>
 </section>
@@ -482,9 +489,8 @@
 <footer class="bg-slate-900 text-slate-300 pt-20 pb-8">
   <div class="max-w-7xl mx-auto px-6 lg:px-10 grid sm:grid-cols-2 lg:grid-cols-5 gap-10">
     <div>
-      <div class="flex items-center gap-2">
-        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white font-bold">M</div>
-        <p class="font-bold text-white">MATsHUB</p>
+      <div class="rounded-lg px-2.5 py-1.5 inline-flex items-center">
+        <img src="./assets/images/logo.png" alt="MATsHub" class="h-10 w-auto">
       </div>
       <p class="text-xs text-slate-400 dark:text-slate-500 mt-4 leading-relaxed">Learn modern web development skills and build powerful tools and websites to innovate with the newest tech.</p>
     </div>
@@ -518,7 +524,7 @@
     <div>
       <p class="font-semibold text-white text-sm mb-4">Contact Us</p>
       <ul class="text-xs space-y-3 text-slate-400 dark:text-slate-500">
-        <li class="flex gap-2"><i data-lucide="map-pin" class="w-5 h-5 text-brand-600"></i> Multipara Main Bazaar, Jaranwala Road, Faisalabad</li>
+        <li class="flex gap-2"><i data-lucide="map-pin" class="w-5 h-5 text-brand-600"></i> MalikPura Main Bazaar, Jaranwala Road, Faisalabad</li>
         <li class="flex gap-2 font-bold"><i data-lucide="phone" class="w-5 h-5 text-brand-600"></i> +92 349 2006 206</li>
         <li class="flex gap-2"><i data-lucide="mail" class="w-5 h-5 text-brand-600"></i> matshub@gmail.com</li>
       </ul>
@@ -535,10 +541,10 @@
   </div>
 </footer>
 
-<button id="scrollTop" class="hidden fixed bottom-6 right-6 w-11 h-11 rounded-full bg-brand-600 text-white shadow-lg items-center justify-center hover:bg-brand-700 transition">↑</button>
+<button id="scrollTop" class="hidden fixed bottom-6 right-6 w-11 h-11 rounded-full bg-brand-600 text-white shadow-lg items-center justify-center hover:bg-brand-700 transition"></button>
 
     <!-- Link JAVASCRIPT FILE-->
-    <script src="./assets/script.js"></script>
+    <script src="./assets/js/script.js"></script>
     <!-- For Icons -->
     <script>
        lucide.createIcons();

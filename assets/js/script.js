@@ -1,6 +1,8 @@
 
   // ---------- Mobile sidebar menu ----------
   const menuBtn = document.getElementById('menuBtn');
+  const navLogo = document.getElementById("navLogo");
+  const sidebarLogo = document.getElementById("sidebarLogo");
   const menuCloseBtn = document.getElementById('menuCloseBtn');
   const mobileMenu = document.getElementById('mobileMenu');
   const mobileOverlay = document.getElementById('mobileOverlay');
@@ -59,6 +61,18 @@
   function applyTheme(isDark) {
     root.classList.toggle("dark", isDark);
 
+    // Change Logo
+    if (navLogo) {
+        navLogo.src = isDark
+            ? "assets/images/light-logo.png"   // Dark Theme
+            : "assets/images/dark-logo.png";   // Light Theme
+    }
+     if (sidebarLogo) {
+        sidebarLogo.src = isDark
+            ? "assets/images/light-logo.png"   // Dark Theme
+            : "assets/images/dark-logo.png";   // Light Theme
+     }
+
     if (themeToggle) {
         themeToggle.innerHTML = isDark
             ? '<i data-lucide="sun" class="w-5 h-5"></i>'
@@ -71,11 +85,10 @@
             : '<i data-lucide="moon" class="w-5 h-5"></i> Dark Mode';
     }
 
-    // Re-render Lucide icons
     lucide.createIcons();
 
     localStorage.setItem("matshub-theme", isDark ? "dark" : "light");
-    }
+}
 
   function initTheme(){
     let saved = null;
