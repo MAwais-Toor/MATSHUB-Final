@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MATSHUB — Empower Your Business, Accelerate Your Growth</title>
+<link rel="icon" type="image/x-icon" href="./assets/images/matshub.svg">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -50,7 +51,7 @@
 
     <!-- Main nav links -->
     <nav class="hidden xl:flex items-center gap-7 text-sm font-medium text-slate-600 dark:text-slate-300 shrink-0">
-      <a href="#home" class="hover:text-brand-600 transition">Home</a>
+      <a href="./index.html" class="hover:text-brand-600 transition">Home</a>
       <a href="#about" class="hover:text-brand-600 transition">About</a>
       <a href="#services" class="hover:text-brand-600 transition">Services</a>
       <a href="#courses" class="hover:text-brand-600 transition">Courses</a>
@@ -156,6 +157,25 @@
 <!-- ===================== HERO ===================== -->
 <section id="home" class="relative overflow-hidden pt-16 pb-10">
   <div class="absolute inset-0 -z-10 bg-gradient-to-b from-brand-50/70 via-white to-white dark:from-slate-900 dark:via-slate-900 dark:to-slate-900"></div>
+        <!-- Animated Grid -->
+        <div class="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+
+            <!-- Vertical Lines -->
+            <div class="grid-vertical"></div>
+
+            <!-- Horizontal Lines -->
+            <div class="grid-horizontal"></div>
+
+            <!-- Moving Beam 1 -->
+            <div class="beam beam-1"></div>
+
+            <!-- Moving Beam 2 -->
+            <div class="beam beam-2"></div>
+
+            <!-- Moving Beam 3 -->
+            <div class="beam beam-3"></div>
+
+        </div>
   <div class="max-w-4xl mx-auto text-center px-6 fade-up">
       <div class="relative inline-block rounded-2xl p-[3px] overflow-hidden mb-6">
           <span class="absolute inset-0 rounded-2xl bg-[conic-gradient(from_0deg,#60a5fa,#2563eb,#1e3a8a,#60a5fa)] animate-spin-slow"></span>
@@ -341,32 +361,191 @@
 </section>
 
 <!-- ===================== COURSES ===================== -->
-<section id="courses" class="max-w-6xl mx-auto px-6 lg:px-10 py-24 text-center">
-  <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Advanced Level <span class="text-brand-600">Courses</span></h2>
-  <p class="mt-3 text-slate-500 dark:text-slate-400">Gain real-world skills and advance your career with expert-led content.</p>
-  <div class="mt-12 grid md:grid-cols-3 gap-6">
-    <div class="card-hover relative rounded-2xl overflow-hidden h-56 bg-slate-900 text-left flex items-end p-5">
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
-      <div class="relative z-10">
-        <p class="font-semibold text-white">Basic Frontend Web Design</p>
-        <p class="text-xs text-slate-300 mt-1">HTML, CSS, Bootstrap &amp; Design</p>
-      </div>
+<section id="courses" class="py-24 bg-slate-50 dark:bg-slate-950">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+        <!-- Heading -->
+        <div class="text-center mb-14">
+            <h2 class="text-4xl font-bold text-slate-900 dark:text-white">
+                Our <span class="text-brand-600">Premium Courses</span>
+            </h2>
+            <p class="mt-3 text-slate-500 dark:text-slate-400">
+                Learn modern skills with live projects and lifetime support.
+            </p>
+        </div>
+
+        <!-- Cards -->
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+            <!-- Card 1 -->
+            <div class="group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-lg transition-all duration-500 ease-out hover:-translate-y-3 hover:scale-[1] hover:shadow-[0_25px_60px_rgba(37,99,235,0.25)]">
+
+                <div class="relative">
+                    <img src="assets/images/courses/frontend.jpg"
+                      class="w-full h-60 object-cover transition-transform duration-700 group-hover:scale-110">
+
+                    <span class="absolute top-4 left-4 bg-brand-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                        Bestseller
+                    </span>
+                </div>
+
+                <div class="p-6">
+
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-2xl font-bold dark:text-white">
+                            Frontend Development
+                        </h3>
+
+                        <div class="flex items-center gap-1 text-yellow-500">
+                            <i class="fa-solid fa-star"></i>
+                            <span class="text-slate-600 dark:text-slate-300">4.9</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mt-5">
+
+                          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-100 dark:bg-green-500/10 text-green-700 dark:text-green-400 text-xs font-medium">
+                              <i class="fa-solid fa-video text-[11px]"></i>
+                              Recorded &amp; Live Classes
+                          </span>
+
+                          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 text-xs font-medium">
+                              <i class="fa-brands fa-whatsapp text-[12px]"></i>
+                              24/7 WhatsApp Support
+                          </span>
+
+                    </div>
+
+                    <div class="flex justify-between items-end mt-7">
+                        <div>
+                            <p class="line-through text-slate-400">PKR 20,000</p>
+                            <h4 class="text-3xl font-bold text-brand-600">PKR 15,000</h4>
+                        </div>
+
+                        <a href="#"
+                            class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-3 rounded-xl font-semibold transition">
+                            Enroll
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+
+            <div class="group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-lg transition-all duration-500 ease-out hover:-translate-y-3 hover:scale-[1] hover:shadow-[0_25px_60px_rgba(37,99,235,0.25)]">
+
+                <div class="relative">
+                    <img src="assets/images/courses/frontend.jpg" class="w-full h-60 object-cover transition-transform duration-700 group-hover:scale-110">
+
+                    <span class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                        Most Popular
+                    </span>
+                </div>
+
+                <div class="p-6">
+
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-2xl font-bold dark:text-white">
+                            Full Stack Development
+                        </h3>
+
+                        <div class="flex items-center gap-1 text-yellow-500">
+                            <i class="fa-solid fa-star"></i>
+                            <span class="text-slate-600 dark:text-slate-300">4.8</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mt-5">
+
+                          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-100 dark:bg-green-500/10 text-green-700 dark:text-green-400 text-xs font-medium">
+                              <i class="fa-solid fa-video text-[11px]"></i>
+                              Recorded &amp; Live Classes
+                          </span>
+
+                          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 text-xs font-medium">
+                              <i class="fa-brands fa-whatsapp text-[12px]"></i>
+                              24/7 WhatsApp Support
+                          </span>
+
+                    </div>
+
+                    <div class="flex justify-between items-end mt-7">
+                        <div>
+                            <p class="line-through text-slate-400">PKR 40,000</p>
+                            <h4 class="text-3xl font-bold text-brand-600">PKR 30,000</h4>
+                        </div>
+
+                        <a href="#"
+                            class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-3 rounded-xl font-semibold transition">
+                            Enroll
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+
+            <div class="group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-lg transition-all duration-500 ease-out hover:-translate-y-3 hover:scale-[1] hover:shadow-[0_25px_60px_rgba(37,99,235,0.25)]">
+
+                <div class="relative">
+                    <img src="assets/images/courses/frontend.jpg"
+                          class="w-full h-60 object-cover transition-transform duration-700 group-hover:scale-110">
+
+                    <span class="absolute top-4 left-4 bg-emerald-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                        New Course
+                    </span>
+                </div>
+
+                <div class="p-6">
+
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-2xl font-bold dark:text-white">
+                            WordPress & Blogging
+                        </h3>
+
+                        <div class="flex items-center gap-1 text-yellow-500">
+                            <i class="fa-solid fa-star"></i>
+                            <span class="text-slate-600 dark:text-slate-300">5.0</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mt-5">
+
+                          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-100 dark:bg-green-500/10 text-green-700 dark:text-green-400 text-xs font-medium">
+                              <i class="fa-solid fa-video text-[11px]"></i>
+                              Recorded &amp; Live Classes
+                          </span>
+
+                          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 text-xs font-medium">
+                              <i class="fa-brands fa-whatsapp text-[12px]"></i>
+                              24/7 WhatsApp Support
+                          </span>
+
+                    </div>
+
+                    <div class="flex justify-between items-end mt-7">
+                        <div>
+                            <p class="line-through text-slate-400">PKR 18,000</p>
+                            <h4 class="text-3xl font-bold text-brand-600">PKR 12,000</h4>
+                        </div>
+
+                        <a href="#"
+                            class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-3 rounded-xl font-semibold transition">
+                            Enroll
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
-    <div class="card-hover relative rounded-2xl overflow-hidden h-56 bg-slate-900 text-left flex items-end p-5">
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
-      <div class="relative z-10">
-        <p class="font-semibold text-white">Advanced Frontend Web Design</p>
-        <p class="text-xs text-slate-300 mt-1">React, Tailwind CSS &amp; modern practices</p>
-      </div>
-    </div>
-    <div class="card-hover relative rounded-2xl overflow-hidden h-56 bg-slate-900 text-left flex items-end p-5">
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
-      <div class="relative z-10">
-        <p class="font-semibold text-white">Full Stack Development</p>
-        <p class="text-xs text-slate-300 mt-1">Build robust APIs and web backends with Node &amp; MongoDB</p>
-      </div>
-    </div>
-  </div>
 </section>
 
 <!-- ===================== FAQ ===================== -->
@@ -543,10 +722,98 @@
 
 <button id="scrollTop" class="hidden fixed bottom-6 right-6 w-11 h-11 rounded-full bg-brand-600 text-white shadow-lg items-center justify-center hover:bg-brand-700 transition"><i data-lucide="arrow-up" class="w-5 h-5 text-white"></i></button>
 
-    <!-- Link JAVASCRIPT FILE-->
+    
+      <!-- Floting Profile -->
+        <div class="fixed bottom-3 left-3 sm:bottom-5 sm:left-5 z-40 flex items-center gap-2 sm:gap-3">
+
+        <a href="https://www.linkedin.com/in/mawaistoor/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="relative w-10 h-10 sm:w-12 sm:h-12 transition-all duration-300 hover:scale-110">
+
+            <!-- Glow -->
+            <span class="absolute top-1/2 left-1/2
+                w-10 h-10 sm:w-12 sm:h-12
+                -translate-x-1/2 -translate-y-1/2
+                rounded-full
+                bg-brand-500/40 dark:bg-brand-400/35
+                blur-md
+                slow-ping">
+            </span>
+
+            <!-- Profile -->
+            <img
+                src="./assets/images/Founder-of-MATSHUB.png"
+                alt="LinkedIn"
+                class="relative z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover
+                border-2 border-white dark:border-slate-700
+                shadow-lg">
+
+            <!-- LinkedIn Icon -->
+            <span class="absolute bottom-0 right-0
+                bg-white dark:bg-slate-800
+                p-1 rounded-full shadow-md
+                border border-slate-200 dark:border-slate-700
+                z-20">
+
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="#0A66C2"
+                    class="w-3 h-3 sm:w-3.5 sm:h-3.5">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.268c-.966 0-1.75-.792-1.75-1.764 0-.973.784-1.765 1.75-1.765s1.75.792 1.75 1.765c0 .972-.784 1.764-1.75 1.764zm13.5 10.268h-3v-4.604c0-1.098-.022-2.511-1.531-2.511-1.532 0-1.767 1.197-1.767 2.432v4.683h-3v-9h2.878v1.233h.041c.4-.756 1.379-1.553 2.837-1.553 3.034 0 3.594 1.996 3.594 4.59v4.73z"/>
+                </svg>
+
+            </span>
+
+        </a>
+
+        <!-- Text -->
+        <div class="leading-tight">
+
+            <p class="text-sm font-semibold text-slate-900 dark:text-white">
+                Muhammad Awais Toor
+            </p>
+
+            <p id="statusText"
+              class="text-xs text-slate-500 dark:text-slate-400 transition-all duration-500">
+                Web Developer &amp; Creator
+            </p>
+
+        </div>
+
+        </div>
+  <!-- Link JAVASCRIPT FILE-->
     <script src="./assets/js/script.js"></script>
     <!-- For Icons -->
     <script>
+      document.addEventListener("DOMContentLoaded", () => {
+
+    const statusText = document.getElementById("statusText");
+
+    const messages = [
+        'Web Developer &amp; Creator',
+        'Founder &amp; CEO MATSHUB'
+    ];
+
+    let current = 0;
+
+    setInterval(() => {
+
+        statusText.classList.add("opacity-0");
+
+        setTimeout(() => {
+
+            current = (current + 1) % messages.length;
+
+            statusText.innerHTML = messages[current];
+
+            statusText.classList.remove("opacity-0");
+
+        }, 400);
+
+    }, 3000);
+
+});
        lucide.createIcons();
     </script>
 </body>

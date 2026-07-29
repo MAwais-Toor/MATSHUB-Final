@@ -17,5 +17,218 @@ body{font-family:'Poppins',sans-serif;}
   body, header, section, footer, div, button, input, a, span{transition:background-color .25s ease, border-color .25s ease, color .25s ease;}
   .dark body{background:#0f172a;}
    /* Rotating conic-gradient border badge */
-  .animate-spin-slow{ animation:spin-slow 3.5s linear infinite; }
+  .animate-spin-slow{ animation:spin-slow 4s linear infinite; }
   @keyframes spin-slow{ to{ transform:rotate(360deg); } }
+  /* ===========================
+   Animated Grid Background
+=========================== */
+
+.grid-vertical,
+.grid-horizontal{
+    position:absolute;
+    inset:0;
+}
+
+/* Vertical */
+
+.grid-vertical{
+
+    background-image:
+    repeating-linear-gradient(
+        90deg,
+        rgba(37,99,235,.08) 0px,
+        rgba(37,99,235,.08) 1px,
+        transparent 1px,
+        transparent 70px
+    );
+
+    animation:gridVertical 14s linear infinite;
+
+}
+
+.dark .grid-vertical{
+
+    background-image:
+    repeating-linear-gradient(
+        90deg,
+        rgba(255,255,255,.06) 0px,
+        rgba(255,255,255,.06) 1px,
+        transparent 1px,
+        transparent 70px
+    );
+
+}
+
+/* Horizontal */
+
+.grid-horizontal{
+
+    background-image:
+    repeating-linear-gradient(
+        rgba(37,99,235,.08) 0px,
+        rgba(37,99,235,.08) 1px,
+        transparent 1px,
+        transparent 70px
+    );
+
+    animation:gridHorizontal 18s linear infinite;
+
+}
+
+.dark .grid-horizontal{
+
+    background-image:
+    repeating-linear-gradient(
+        rgba(255,255,255,.06) 0px,
+        rgba(255,255,255,.06) 1px,
+        transparent 1px,
+        transparent 70px
+    );
+
+}
+
+@keyframes gridVertical{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-70px);
+    }
+
+}
+
+@keyframes gridHorizontal{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-70px);
+    }
+
+}
+
+
+/* ===========================
+   Moving Light Beams
+=========================== */
+
+.beam{
+
+    position:absolute;
+
+    width:250px;
+
+    height:2px;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #3b82f6,
+        transparent
+    );
+
+    filter:blur(.4px);
+
+    opacity:.7;
+
+}
+
+.dark .beam{
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #60a5fa,
+        transparent
+    );
+
+}
+
+/* Beam 1 */
+
+.beam-1{
+
+    top:18%;
+
+    animation:beam1 8s linear infinite;
+
+}
+
+/* Beam 2 */
+
+.beam-2{
+
+    top:48%;
+
+    animation:beam2 10s linear infinite;
+
+}
+
+/* Beam 3 */
+
+.beam-3{
+
+    top:75%;
+
+    animation:beam3 12s linear infinite;
+
+}
+
+@keyframes beam1{
+
+    from{
+        left:-300px;
+    }
+
+    to{
+        left:110%;
+    }
+
+}
+
+@keyframes beam2{
+
+    from{
+        left:110%;
+    }
+
+    to{
+        left:-300px;
+    }
+
+}
+
+@keyframes beam3{
+
+    from{
+        left:-350px;
+    }
+
+    to{
+        left:110%;
+    }
+
+}
+/* Flotaing Profile */
+@keyframes slowPing {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: .6;
+    }
+    70% {
+        transform: translate(-50%, -50%) scale(2.2);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(2.2);
+        opacity: 0;
+    }
+}
+
+.slow-ping{
+    animation: slowPing 2.5s cubic-bezier(0,0,.2,1) infinite;
+}
